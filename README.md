@@ -15,6 +15,7 @@ Features:
 - Fully configurable via .env file, including embedding and chat model deployment names.
 
 Folder Structure:
+
 document-qa-bot/
 ├── app.py               # Main application
 ├── prompts.py           # System and user prompt templates
