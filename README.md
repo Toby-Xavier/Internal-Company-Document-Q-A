@@ -1,7 +1,6 @@
 # Internal Company Knowledge Base/Q&A Bot
 
-
-This project is an AI-powered internal knowledge base assistant designed for company staff. It allows employees to ask questions and receive accurate, detailed answers strictly based on the company's internal documents, including PDFs and text files. The bot uses Azure OpenAI for embeddings and chat completions, enabling Retrieval-Augmented Generation (RAG) to ensure responses are grounded in actual company content. This repository demonstrates a production-ready approach to building a document Q&A system, showcasing skills in prompt engineering, document chunking, embeddings, and enterprise AI applications.
+This project is an AI-powered internal knowledge base assistant designed for company staff. It allows employees to ask questions and receive accurate, detailed answers strictly based on the company's internal documents, including PDFs and text files. The bot uses Azure OpenAI for embeddings and chat completions, enabling Retrieval-Augmented Generation (RAG) to ensure responses are grounded in actual company content.
 
 Features:
 - Supports TXT and PDF documents, including encrypted PDFs.
@@ -17,11 +16,11 @@ Features:
 Folder Structure:
 
 document-qa-bot/
-├── app.py               # Main application
-├── prompts.py           # System and user prompt templates
-├── .env                 # Environment variables
-├── requirements.txt     # Python dependencies
-├── documents/           # Folder containing PDF and TXT documents
+├ app.py               # Main application
+├ prompts.py           # System and user prompt templates
+├ .env                 # Environment variables
+├ requirements.txt     # Python dependencies
+├ documents/           # Folder containing PDF and TXT documents
 
 Setup Instructions:
 1. Clone the repository:
@@ -42,11 +41,11 @@ Setup Instructions:
    Type questions at the prompt. Type 'exit' to quit.
 
 How It Works:
-1. Document Loading & Chunking: All TXT and PDF documents in the documents/ folder are loaded and split into smaller chunks to improve retrieval accuracy.
-2. Embedding Generation: Each chunk is converted into a vector using Azure OpenAI embeddings.
-3. Question Processing: User questions are converted into embeddings and compared with document chunks using cosine similarity.
-4. Context Retrieval: The top-k most relevant chunks are selected and sent to the Azure OpenAI chat model.
-5. Answer Generation: The chat model generates a professional, document-grounded response and includes a polite follow-up prompt.
+1. Load and Chunk Document: All TXT and PDF documents in the documents/folder are loaded and split into smaller chunks to improve retrieval accuracy.
+2. Generate Embedding: Each chunk is converted into a vector using Azure OpenAI embeddings.
+3. Process Questions: User questions are converted into embeddings and compared with document chunks using cosine similarity.
+4. Retreieve Context: The top-k most relevant chunks are selected and sent to the Azure OpenAI chat model.
+5. Generate Answers: The chat model generates a professional, document-grounded response and includes a polite follow-up prompt.
 
 Technologies Used:
 - Python 3.13+
@@ -55,9 +54,3 @@ Technologies Used:
 - python-dotenv
 - Azure OpenAI API
 - PyCryptodome (for encrypted PDFs)
-
-Notes:
-- All responses are strictly based on internal company documentation to prevent hallucinations.
-- The bot handles encrypted PDFs gracefully.
-- Chunking and token safety measures ensure reliable embeddings even for large documents.
-- This is a CLI version; future upgrades could include a web interface, persistent embeddings storage, and citation support.
