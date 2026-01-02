@@ -13,15 +13,6 @@ Features:
 - Includes automatic follow-up prompts after every answer to improve staff engagement.
 - Fully configurable via .env file, including embedding and chat model deployment names.
 
-Folder Structure:
-
-document-qa-bot/
-├ app.py               # Main application
-├ prompts.py           # System and user prompt templates
-├ .env                 # Environment variables
-├ requirements.txt     # Python dependencies
-├ documents/           # Folder containing PDF and TXT documents
-
 Setup Instructions:
 1. Clone the repository:
    git clone <your-repo-url>
